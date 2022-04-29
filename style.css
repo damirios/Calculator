@@ -1,0 +1,169 @@
+/* Обнуление */
+html {
+    height: 100%;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+ul, ol {
+    padding: 0;
+}
+body, h1, h2, h3, h4, p, ul, ol, li {
+    margin: 0;
+}
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+ul, ol {
+    list-style: none;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration-skip-ink: none;
+    text-decoration: none;
+    color: inherit;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+/*Обнуление завершено */
+button {
+    border: 2px solid rgb(221, 216, 216);
+    cursor: pointer;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    min-width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
+.shell {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(184, 183, 183);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000;
+    max-width: 1500px;
+}
+.shell__display {
+    flex: 0 1 250px;
+    background-color: rgb(231, 231, 231);
+    padding: 40px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.display__secondary {
+    flex: 0 0 60%;
+    font-size: 45px;
+    color: rgba(26, 18, 18, 0.7);
+}
+.display__main {
+    flex: 0 0 40%;
+    font-size: 60px;
+    color: rgb(26, 18, 18);
+}
+.shell__workpanel {
+    flex: 0 1 500px;
+    background-color: inherit;
+    /* border: 3px solid #000; */
+    border-radius: 10px;
+    /* padding: 15px; */
+}
+.workpanel {
+    display: grid;
+    grid-template-columns: 350px 400px 200px;
+    grid-template-rows: 100px 1fr;
+    gap: 15px;
+    grid-template-areas: 
+        "additional additional additional"
+        "advanced digits simple"
+    ;
+}
+.workpanel__additional-buttons {
+    grid-area: additional;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7.5px 0;
+}
+.clear-btn {
+    flex: 0 0 200px;
+    border-radius: 10px;
+    background-color: rgb(238, 121, 121);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+.clear-btn:hover {
+    background-color: rgb(190, 89, 89);
+}
+.clear-btn:active {
+    background-color: rgb(148, 66, 66);
+}
+.workpanel__advanced {
+    grid-area: advanced;
+}
+.workpanel__digits {
+    grid-area: digits;
+}
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+}
+.digit {
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-weight: 700;
+    font-size: 40px;
+    border-radius: 10px;
+}
+.digit:hover {
+    background-color: rgb(189, 187, 187);
+}
+.digit:active {
+    background-color: rgb(145, 145, 145);
+}
+.workpanel__simple {
+    grid-area: simple;
+    display: grid;
+    gap: 15px;
+    grid-template: repeat(4, 1fr) / 1fr;
+}
+.simple-oper {
+    background-color: rgb(224, 224, 224);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: #444;
+}
+.simple-oper:hover {
+    background-color: rgb(189, 187, 187);
+}
+.simple-oper:active {
+    background-color: rgb(145, 145, 145);
+}
